@@ -1,0 +1,39 @@
+{
+  "name": "react-hadiths",
+  "version": "0.0.1",
+  "description": "A Simple SDK to use the Hadiths API effectively and efficiently",
+  "main": "dist/index.js",
+  "module": "dist/index.m.js",
+  "unpkg": "dist/index.umd.js",
+  "types": "dist/index.d.js",
+  "scripts": {
+    "build": "rm -rf dist && microbundle --tsconfig tsconfig.json --no-sourcemap"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BigYusuf/react-hadiths.git"
+  },
+  "keywords": [
+    "https://rapidapi.com/BigYusuf/api/hadiths-api/",
+    "hadiths-api",
+    "hadiths",
+    "rasulillah",
+    "api",
+    "react-hadiths"
+  ],
+  "author": "BigYusufff- mystik5551@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BigYusuf/react-hadiths/issues"
+  },
+  "homepage": "https://github.com/BigYusuf/react-hadiths#readme",
+  "files": [
+    "dist"
+  ],
+  "devDependencies": {
+    "microbundle": "^0.15.1"
+  },
+  "dependencies": {
+    "isomorphic-unfetch": "^4.0.2"
+  }
+}
