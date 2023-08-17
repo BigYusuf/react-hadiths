@@ -1,11 +1,20 @@
-import { Base } from "src/base";
-import { Hadith } from "./types";
+import { Base } from "../base";
+import { HadithTypes } from "./types";
 
 export class Hadiths extends Base {
-    getHadithsById( id: string ): Promise<Hadith> {
+    getHadithById( id: string ): Promise<HadithTypes> {
         return this.invoke(`/hadiths/${id}`)
     }
-    geAlltHadiths(): Promise<Hadith> {
+    getAllHadiths(): Promise<HadithTypes> {
         return this.invoke(`/hadiths`)
+    }
+    getHadithsByCollection(collectionName: string): Promise<HadithTypes> {
+        return this.invoke(`/hadiths?collection=${collectionName}`)
+    }
+    getHadithsByCategory(collectionName: string, categoryName: string): Promise<HadithTypes> {
+        return this.invoke(`/hadiths?collection=${collectionName}&category=${categoryName}`)
+    }
+    searchHadiths(searchQuery: string): Promise<HadithTypes> {
+        return this.invoke(`/hadiths?search=${searchQuery}`)
     }
 }

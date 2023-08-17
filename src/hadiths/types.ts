@@ -1,4 +1,4 @@
-export declare type Hadith = {
+export declare type HadithTypes = {
     _id: string;
 Chapter_Number: number;
 Chapter_English: string;
